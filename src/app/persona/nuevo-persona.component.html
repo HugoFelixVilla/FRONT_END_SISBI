@@ -1,0 +1,71 @@
+<app-menu></app-menu>
+
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-md-5 mx-auto">
+            <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+
+               
+                <div class="form-group">
+                    <label for="dni">DNI</label>
+                    <input type="number" class="form-control" id="dni" name="dni" [(ngModel)]="dni" required>
+                </div>
+
+                 
+                <div class="form-group">
+                    <label for="nombre">NOMBRE</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="Nombre" required>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="apellidos">APELLIDOS</label>
+                    <input type="text" class="form-control" id="apellidos" name="apellidos" [(ngModel)]="Apellidos" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="direccion">DIRECCION</label>
+                    <input type="text" class="form-control" id="direccion" name="direccion" [(ngModel)]="Direccion" required>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="telefono">TELEFONO</label>
+                    <input type="number" class="form-control" id="telefono" name="telefono" [(ngModel)]="Telefono" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="CorreoElectronico">CORREO ELECTRONICO</label>
+                    <input type="email" class="form-control" id="CorreoElectronico" name="CorreoElectronico" [(ngModel)]="CorreoElectronico" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="Clave">Clave</label>
+                    <input type="password" class="form-control" id="Clave" name="Clave" [(ngModel)]="Clave" required>
+                </div>
+
+                 
+                <label for="nombre">Estado</label>
+            <br>
+                <div class="form-group">
+                    <select name="estado" class="form-control" [(ngModel)]="Estado"> 
+                        <option value="ACTIVO">Activo</option>
+                        <option value="INACTIVO">Inactivo</option> 
+                      </select>
+                    </div>
+
+               
+             <br>
+             
+                <div class="form-group">
+                    <button class="btn btn-outline-success btn-block" [disabled]="!f.valid">Crear</button>
+                   <button class="btn btn-outline-primary btn-block" routerLink="/lista_per">
+                    <i class="fas fa-arrow-alt-circle-left"></i> Volver</button>
+                </div>
+
+             
+            </form>
+        </div>
+    </div>
+
+</div>

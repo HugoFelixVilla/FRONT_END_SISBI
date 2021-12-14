@@ -1,0 +1,25 @@
+<app-menu></app-menu>
+
+<div class="container">
+    <div class="row mt-5" *ngIf="rol_persona">
+      <div class="col-md-4 mx-auto">
+          <div class="card" style="width: 18rem;">
+              <div class="card-header text-center">
+                Detalle
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item"><b>ID: </b>{{rol_persona.id_PERSONA_ROL}}</li>
+                <li class="list-group-item"><b>Nombre: </b>{{rol_persona.persona.nombre}}</li>
+                <li class="list-group-item"><b>Apellido: </b>{{rol_persona.persona.apellidos}}</li>
+                <li class="list-group-item"><b>DNI: </b>{{rol_persona.persona.dni}}</li>
+                <li class="list-group-item"><b>ID ROL: </b>{{rol_persona.rol.id_Rol}}</li>
+                <li class="list-group-item"><b>Rol: </b>{{rol_persona.rol.rolNombre}}</li> 
+              </ul>
+              <div class="card-footer">
+                  <button class="btn btn-outline-primary btn-block" (click)="volver()"><i class="fas fa-arrow-alt-circle-left"></i> Volver</button>
+              </div>
+            </div>
+            
+      </div>
+  </div>
+  </div>

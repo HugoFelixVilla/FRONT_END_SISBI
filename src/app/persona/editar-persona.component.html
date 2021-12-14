@@ -1,0 +1,85 @@
+<app-menu></app-menu>
+
+<div class="container" *ngIf="persona">
+    <div class="row mt-5">
+        <div class="col-md-4 mx-auto">
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+
+                <div class="form-group">
+                    <label for="id">ID</label>
+                    <input type="number" class="form-control" id="id" readonly="true" name="id" [(ngModel)]="persona.id_Persona"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label for="dni">Dni</label>
+                    <input type="number" class="form-control" id="dni" name="dni" [(ngModel)]="persona.dni"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="persona.nombre"
+                        required>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="nombre">Apellidos</label>
+                    <input type="text" class="form-control" id="apellidos" name="apellidos" [(ngModel)]="persona.apellidos"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label for="nombre">Direccion</label>
+                    <input type="text" class="form-control" id="direccion" name="direccion" [(ngModel)]="persona.direccion"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label for="nombre">Telefono</label>
+                    <input type="numer" class="form-control" id="telefono" name="telefono" [(ngModel)]="persona.telefono"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label for="nombre">Correo</label>
+                    <input type="email" class="form-control" id="correo" name="correo" [(ngModel)]="persona.correoElectronico"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label for="nombre">Clave</label>
+                    <input type="password" class="form-control" id="clave" name="clave"  [(ngModel)]="persona.clave"
+                        required>
+                </div>
+                 
+
+                <br>
+                <!-- <label for="nombre">Rol</label>
+                <div class="form-group" >
+                    <select name="select" class="form-control" [(ngModel)]="persona.roles">
+                        <option value="[ROLE_USER]">USUARIO</option>
+                        <option value="[ROLE_ADMIN]">ADMINISTRADOR</option>
+                        <option value="[ROLE_BIBLIOTECARIO]">BIBLIOTECARIO</option>
+                    </select>
+                </div> -->
+
+
+                <br>
+                <label for="nombre">Estado</label>
+                <div class="form-group" >
+                    <select name="select" class="form-control" [(ngModel)]="persona.estado">
+                        <option value="ACTIVO">Activo</option>
+                        <option value="INACTIVO">Inactivo</option>
+                    </select>
+                </div>
+
+                <br>
+                <button class="btn btn-outline-success btn-block" [disabled]="!f.valid">Actualizar</button>
+                <button class="btn btn-outline-primary btn-block" routerLink="/lista_per">
+                    <i class="fas fa-arrow-alt-circle-left"></i> Volver</button>
+            </form>
+        </div>
+    </div>
+</div>

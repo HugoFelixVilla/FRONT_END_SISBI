@@ -1,0 +1,71 @@
+<app-menu></app-menu>
+
+<div class="container" *ngIf="libro">
+    <div class="row mt-5">
+        <div class="col-md-4 mx-auto">
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+
+      
+
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="libro.nombre"
+                        required>
+                </div>
+                <div class="form-group">
+                    <label for="anioPublicacion">AÑO PUBLICACION</label>
+                    <input type="number" class="form-control" id="anioPublicacion" name="anioPublicacion"
+                        [(ngModel)]="libro.anioPublicacion" required>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="nroPaginas">NRO PAGINAS</label>
+                    <input type="number" class="form-control" id="nroPaginas" name="nroPaginas"
+                        [(ngModel)]="libro.nroPaginas" required>
+                </div>
+
+
+                <label for="especiaidad">Especialidad</label>
+                <select name="especiaidad" class="form-control"  [(ngModel)]="libro.especialidad!.id_Especialidad"> 
+                  
+                  <option *ngFor="let aux of lstespecialidad" value="{{aux.id_Especialidad}}" >
+                      {{aux.nombre}}
+  
+                  </option> 
+                </select>
+    
+                   
+                 <br>
+
+                 <label for="editorial">Editorial</label>
+                 <select name="editorial" class="form-control" [(ngModel)]="libro.editorial!.id_EDITORIAL"> 
+                   
+                   <option *ngFor="let aux of lsteditorial" value="{{aux.id_EDITORIAL}}" >
+                       {{aux.nombre}}
+   
+                   </option> 
+                 </select>
+   
+               
+             
+           
+               
+            
+       
+                <label for="nombre">Estado</label>
+                <div class="form-group" >
+                    <select name="select" class="form-control" [(ngModel)]="libro!.estado">
+                        <option value="ACTIVO">Activo</option>
+                        <option value="INACTIVO">Inactivo</option>
+                    </select>
+                </div>
+                <br>
+                
+                <button class="btn btn-outline-success btn-block" [disabled]="!f.valid">Actualizar</button>
+                <button class="btn btn-outline-primary btn-block" routerLink="/lista_lib">
+                    <i class="fas fa-arrow-alt-circle-left"></i> Volver</button>
+            </form>
+        </div>
+    </div>
+</div>

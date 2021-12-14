@@ -1,0 +1,77 @@
+<app-menu></app-menu>
+
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-md-5 mx-auto">
+            <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+
+                <div class="form-group">
+                    <label for="ruc">Ruc</label>
+                    <input type="number" class="form-control" id="ruc" name="ruc" [(ngModel)]="ruc" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="nombre" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="descripcion">Descripcion</label>
+                    <input type="text" class="form-control" id="descripcion" name="descripcion" [(ngModel)]="descripcion" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="direccion">Direccion</label>
+                    <input type="text" class="form-control" id="direccion" name="direccion" [(ngModel)]="direccion" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="telefono1">Telefono 1</label>
+                    <input type="number" class="form-control" id="telefono1" name="telefono1" [(ngModel)]="telefono1" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="telefono2">Telefono 2</label>
+                    <input type="number" class="form-control" id="telefono2" name="telefono2" [(ngModel)]="telefono2" required>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="correoElectronico">Correo Electronico</label>
+                    <input type="email" class="form-control" id="correoElectronico" name="correoElectronico" [(ngModel)]="correoElectronico" required>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="fechaCreacion">Fecha Creacion</label>
+                    <input type="date" class="form-control" id="fechaCreacion" name="fechaCreacion" [(ngModel)]="fechaCreacion" required>
+                </div>
+
+              
+
+                <br> 
+                   <div class="form-group">
+                 
+                <label for="nombre">Estado</label>
+                <br>
+                <div class="form-group">
+                    <select name="estado" class="form-control" [(ngModel)]="estado"> 
+                        <option value="ACTIVO">Activo</option>
+                        <option value="INACTIVO">Inactivo</option> 
+                      </select>
+                    </div>
+
+                </div>
+                <br>
+
+                <div class="form-group">
+                    <button class="btn btn-outline-success btn-block" [disabled]="!f.valid">Crear</button>
+                    <button class="btn btn-outline-primary btn-block" routerLink="/lista_edit">
+                        <i class="fas fa-arrow-alt-circle-left"></i> Volver</button>
+               
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>

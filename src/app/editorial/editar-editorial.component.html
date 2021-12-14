@@ -1,0 +1,75 @@
+<app-menu></app-menu>
+
+<div class="container" *ngIf="editorial">
+    <div class="row mt-5">
+        <div class="col-md-4 mx-auto">
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+
+                <div class="form-group">
+                    <label for="ruc">RUC</label>
+                    <input type="number" class="form-control" id="ruc" name="ruc" [(ngModel)]="editorial.ruc"
+                        required>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="editorial.nombre"
+                        required>
+                </div>
+                <div class="form-group">
+                    <label for="precio">Descripcion</label>
+                    <input type="text" class="form-control" id="descripcion" name="descripcion"
+                        [(ngModel)]="editorial.descripcion" required>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="precio">Direccion</label>
+                    <input type="text" class="form-control" id="direccion" name="direccion"
+                        [(ngModel)]="editorial.direccion" required>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="telefono 1">Telefono 1</label>
+                    <input type="number" class="form-control" id="telefono 1" name="telefono 1"
+                        [(ngModel)]="editorial.telefono1" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="telefono 2">Telefono 2</label>
+                    <input type="number" class="form-control" id="telefono 2" name="telefono 2"
+                        [(ngModel)]="editorial.telefono2" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="telefono 2">Correo</label>
+                    <input type="email" class="form-control" id="correoElectronico" name="correoElectronico"
+                        [(ngModel)]="editorial.correoElectronico" required>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="fechaCreacion">Correo</label>
+                    <input type="date" class="form-control" id="fechaCreacion" name="fechaCreacion"
+                        [(ngModel)]="editorial.fechaCreacion" required>
+                </div>
+
+   
+                <br>
+                <label for="nombre">Estado</label>
+                <div class="form-group" >
+                    <select name="select" class="form-control" [(ngModel)]="editorial.estado">
+                        <option value="ACTIVO">Activo</option>
+                        <option value="INACTIVO">Inactivo</option>
+                    </select>
+                </div>
+                <br>
+                <button class="btn btn-outline-success btn-block" [disabled]="!f.valid">Actualizar</button>
+                <button class="btn btn-outline-primary btn-block" routerLink="/lista_edit">
+                    <i class="fas fa-arrow-alt-circle-left"></i> Volver</button>
+            </form>
+        </div>
+    </div>
+</div>

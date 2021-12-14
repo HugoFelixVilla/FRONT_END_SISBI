@@ -1,0 +1,33 @@
+<app-menu></app-menu>
+<!-- {{rol_persona|json}} -->
+<table class="table table-dark table-striped">
+    <thead>
+        <tr>
+          <th scope="col">Id</th> 
+          <th scope="col">NOMBRE</th>
+          <th scope="col">APELLIDOS</th>
+          <th scope="col">DNI</th>
+          <th scope="col">ID ROL</th>
+          <th scope="col">ROL</th> 
+           
+          <th scope="col">Ver</th>
+          <th scope="col">Editar</th> 
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let Rolpersonas of rol_persona">
+        <td>{{Rolpersonas.id_PERSONA_ROL}}</td> 
+          <td>{{Rolpersonas.persona.nombre}}</td> 
+          <td>{{Rolpersonas.persona.apellidos}}</td>
+          <td>{{Rolpersonas.persona.dni}}</td> 
+          <td>{{Rolpersonas.rol.id_Rol}}</td> 
+          <td>{{Rolpersonas.rol.rolNombre}}</td>   
+       <td><button class="btn btn-outline-primary" routerLink="/detalle_per_rol/{{Rolpersonas.id_PERSONA_ROL}}"><i class="far fa-eye"></i> Ver</button></td>
+          <td><button class="btn btn-outline-warning" routerLink="/editar_per_rol/{{Rolpersonas.id_PERSONA_ROL}}"><i class="far fa-edit"></i> Editar</button></td>
+             </tr>
+        
+        
+      </tbody>
+  </table> 
+
+   
