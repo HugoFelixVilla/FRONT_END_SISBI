@@ -1,0 +1,63 @@
+body{
+    background-image: url(img/fondo.jpg); 
+ }
+ 
+ 
+  
+ 
+ h1{
+     color:rgb(9, 3, 92);
+     text-align: center;
+ }
+ h2{
+     color:black;
+     text-align: center;
+ 
+ }
+ h3{
+     color:black;
+     text-align: center;
+     text-justify: auto;
+ }
+ 
+ .contenedor{
+     margin-top: 40px;
+     width: 100%;
+     height: 85vh;
+     display: flex;
+     -webkit-box-align: start;
+     align-items: flex-start;
+     overflow: hidden;
+ }
+ .contenedor-izquierdo{
+     width: 38%;
+     height: 85vh;
+     overflow: hidden;
+     overflow-y: auto;
+     /*background: red;*/
+     padding: 20px 20px 20px 30px;
+ }
+ .contenedor-izquierdo .mision{
+     width: 95%;
+     height: 78%;
+ }
+ .contenedor-medio{
+     width: 24%;
+     height: 85vh;
+     overflow: hidden;
+     overflow-y: auto;
+     /*background: yellow;*/
+     margin-top: 80px;
+ }
+ .contenedor-derecho{
+     width: 38%;
+     height: 85vh;
+     overflow: hidden;
+     overflow-y: auto;
+     /*background: blue;*/
+     padding: 20px 20px 20px 30px;
+ }
+ .contenedor-derecho .vision{
+     width: 95%;
+     height: 80%;
+ }

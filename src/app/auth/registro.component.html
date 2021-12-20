@@ -1,7 +1,17 @@
 <app-menu></app-menu>
+<body> 
+<div class="contenedor-login">
+  <!--Imagen de Portada-->
+  <div class="contenedor-portada">
+      <img src="https://i.ibb.co/tzKJ49n/login2.jpg">               
+  </div>
+
+
 <div class="text-center" *ngIf="isLogged; else loggedOut">
     <h2>Ya has iniciado sesión</h2>
 </div>
+
+
 
 <ng-template #loggedOut>
     <div class="container d-flex justify-content-center">

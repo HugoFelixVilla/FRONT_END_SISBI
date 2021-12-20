@@ -1,0 +1,11 @@
+body{
+    background-image: url(img/fondo.jpg);
+}
+.contenedor-login{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    -webkit-box-align: start;
+    align-items: flex-start;
+    overflow: hidden;
+}
